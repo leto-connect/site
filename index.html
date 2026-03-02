@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★Point&Click Advanture★</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>LETO_Connect</h1>
+    <img src="images/disk.png" alt="image" class="main-image">
+    <div class="buttons">
+        <a href="album.html" class="button">Download album</a>
+        <a href="https://leto08.bandcamp.com/" class="button" target="_blank">BANDCAMP LINK</a>
+    </div>
+    <audio id="bgm" src="album1/track1.wav" autoplay loop></audio>
+    <button id="player" onclick="toggleMusic()">⏸</button>
+
+    <footer>
+    © 2026 PCA1080
+    </footer>
+    
+    <script>
+
+        const audio = document.getElementById("bgm");
+        const button = document.getElementById("player");
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "⏸";
+            } else {
+                audio
+                    audio.pause();
+                    button.textContent = "▶";
+            }
+        }
+    </script>
+</body>
+</html>
